@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Document workspace inspired by Google Docs." />
+    <meta name="description" content="Google Docs inspired document workspace." />
     <title>Atlas editorial draft</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,48 +16,34 @@
   <body>
     <main class="app">
       <header class="topbar">
-        <div class="brand-area">
-          <div class="docs-mark" aria-hidden="true">
+        <div class="brand">
+          <div class="docs-icon" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <div class="title-stack">
-            <div class="workspace-label" contenteditable="true" spellcheck="false">
-              DOCUMENT WORKSPACE
-            </div>
-            <div class="doc-title" contenteditable="true" spellcheck="false">
-              Atlas editorial draft
-            </div>
+          <div class="title-wrap">
+            <div class="doc-name" contenteditable="true" spellcheck="false">Untitled document</div>
+          </div>
+          <div class="doc-tools" aria-hidden="true">
+            <span>в†</span>
+            <span>в–ў</span>
+            <span>вЃ</span>
           </div>
         </div>
 
-        <div class="topbar-right">
-          <button class="circle-action" type="button" aria-label="History">в—ґ</button>
-          <button class="circle-action" type="button" aria-label="Comments">в–¤</button>
-          <button class="circle-action" type="button" aria-label="Video call">в—«</button>
-          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
-            B
-          </button>
-          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
-            B
-          </button>
-          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
-            B
-          </button>
+        <div class="actions">
+          <button class="action-icon" type="button" aria-label="History">в—Њ</button>
+          <button class="action-icon" type="button" aria-label="Comments">в–¤</button>
+          <button class="action-icon" type="button" aria-label="Video call">в—«</button>
           <button class="share-btn" type="button">
-            <span>Share</span>
-            <span class="share-divider"></span>
-            <span class="share-link">Link</span>
+            <span>Share Link</span>
           </button>
-          <div class="live-chip">
-            <span class="live-dot"></span>
-            <span>Live draft</span>
-          </div>
+          <div class="avatar" aria-hidden="true"></div>
         </div>
       </header>
 
-      <nav class="menubar" aria-label="Menu">
+      <nav class="menu" aria-label="Menu">
         <span contenteditable="true" spellcheck="false">File</span>
         <span contenteditable="true" spellcheck="false">Edit</span>
         <span contenteditable="true" spellcheck="false">View</span>
@@ -69,89 +55,79 @@
       </nav>
 
       <section class="toolbar" aria-label="Formatting toolbar">
-        <div class="tool-group left">
-          <button class="icon-btn" type="button" aria-label="Search">вЊ•</button>
-          <button class="icon-btn" type="button" aria-label="Undo">в†¶</button>
-          <button class="icon-btn" type="button" aria-label="Redo">в†·</button>
-          <button class="icon-btn" type="button" aria-label="Print">вЋ™</button>
-          <button class="icon-btn" type="button" aria-label="Paint format">вљ‡</button>
+        <div class="group">
+          <button class="tool" type="button" aria-label="Search">вЊ•</button>
+          <button class="tool" type="button" aria-label="Undo">в†¶</button>
+          <button class="tool" type="button" aria-label="Redo">в†·</button>
+          <button class="tool" type="button" aria-label="Print">вЋ™</button>
+          <button class="tool" type="button" aria-label="Spellcheck">Aвњ“</button>
+          <button class="tool" type="button" aria-label="Paint format">рџ–Њ</button>
         </div>
 
-        <div class="tool-group">
-          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
-            100%
-          </button>
-          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
-            Title
-          </button>
-          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
-            Manrope
-          </button>
+        <div class="group">
+          <button class="chip" type="button" contenteditable="true" spellcheck="false">100%</button>
+          <button class="chip" type="button" contenteditable="true" spellcheck="false">Normal text</button>
+          <button class="chip" type="button" contenteditable="true" spellcheck="false">Arial</button>
         </div>
 
-        <div class="tool-group">
-          <button class="icon-btn" type="button" aria-label="Decrease size">в€’</button>
-          <button class="field-chip size" type="button" contenteditable="true" spellcheck="false">
-            26
-          </button>
-          <button class="icon-btn" type="button" aria-label="Increase size">+</button>
+        <div class="group">
+          <button class="tool" type="button" aria-label="Decrease font size">в€’</button>
+          <button class="chip size" type="button" contenteditable="true" spellcheck="false">11</button>
+          <button class="tool" type="button" aria-label="Increase font size">+</button>
         </div>
 
-        <div class="tool-group">
-          <button class="toggle-btn active" type="button">B</button>
-          <button class="toggle-btn" type="button"><em>I</em></button>
-          <button class="toggle-btn" type="button"><u>U</u></button>
-          <button class="toggle-btn" type="button">A</button>
-          <button class="toggle-btn" type="button">в—ђ</button>
+        <div class="group">
+          <button class="toggle active" type="button">B</button>
+          <button class="toggle" type="button"><em>I</em></button>
+          <button class="toggle" type="button"><u>U</u></button>
+          <button class="toggle" type="button">A</button>
+          <button class="toggle" type="button">вњЋ</button>
+          <button class="toggle" type="button">в›“</button>
+          <button class="toggle" type="button">вЉћ</button>
+          <button class="toggle" type="button">в–Ј</button>
         </div>
 
-        <div class="tool-group spacer">
-          <button class="icon-btn" type="button" aria-label="Link">в›“</button>
-          <button class="icon-btn" type="button" aria-label="Comment">вњЋ</button>
-          <button class="icon-btn" type="button" aria-label="Image">в–Ј</button>
-          <button class="icon-btn" type="button" aria-label="Align">в°</button>
-          <button class="icon-btn" type="button" aria-label="Spacing">в†•</button>
-          <button class="icon-btn" type="button" aria-label="Clear formatting">Г—</button>
+        <div class="group spacer">
+          <button class="tool" type="button" aria-label="Align">в°</button>
+          <button class="tool" type="button" aria-label="Spacing">в†•</button>
+          <button class="tool" type="button" aria-label="Checklist">в‘</button>
+          <button class="tool" type="button" aria-label="Bullets">вЂў</button>
+          <button class="tool" type="button" aria-label="Numbered list">1.</button>
+          <button class="tool" type="button" aria-label="Clear formatting">Г—</button>
         </div>
 
-        <button class="mode-btn" type="button">Editing</button>
+        <button class="mode" type="button">Editing</button>
       </section>
 
       <section class="workspace">
         <aside class="sidebar">
-          <button class="back-btn" type="button" aria-label="Back">в†ђ</button>
+          <button class="back" type="button" aria-label="Back">в†ђ</button>
 
-          <div class="sidebar-head">
+          <div class="sidebar-row">
             <div class="sidebar-title">Document tabs</div>
-            <button class="add-btn" type="button" aria-label="Add tab">+</button>
+            <button class="plus" type="button" aria-label="Add tab">+</button>
           </div>
 
-          <button class="tab-pill active" type="button">
+          <button class="tab active" type="button">
             <span class="tab-icon"></span>
             <span contenteditable="true" spellcheck="false">Tab 1</span>
             <span class="tab-menu">в‹®</span>
           </button>
 
-          <div class="outline-hint">Headings you add to the document will appear here.</div>
+          <div class="sidebar-note">Headings you add to the document will appear here.</div>
         </aside>
 
         <section class="canvas">
-          <div class="ruler ruler-top" aria-hidden="true">
+          <div class="ruler top" aria-hidden="true">
             <span></span><span></span><span></span><span></span><span></span><span></span>
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
 
           <article class="page">
-            <div class="assistant-dot" aria-hidden="true"></div>
-            <div class="assistant-chip-row">
-              <button class="assistant-chip" type="button">Templates</button>
-              <button class="assistant-chip" type="button">Meeting notes</button>
-              <button class="assistant-chip" type="button">Email draft</button>
-              <button class="assistant-chip" type="button">More</button>
-            </div>
+            <div class="cursor" aria-hidden="true"></div>
           </article>
 
-          <div class="ruler ruler-bottom" aria-hidden="true">
+          <div class="ruler bottom" aria-hidden="true">
             <span></span><span></span><span></span><span></span><span></span><span></span>
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
