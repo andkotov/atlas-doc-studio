@@ -3,172 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A document-first writing workspace with a Google Docs-inspired editing surface."
-    />
-    <title>Atlas Doc Studio</title>
+    <meta name="description" content="Document workspace inspired by Google Docs." />
+    <title>Atlas editorial draft</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="backdrop"></div>
-    <div class="noise"></div>
-
-    <main class="app-shell">
+    <main class="app">
       <header class="topbar">
-        <div class="brand">
-          <div class="app-mark" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="brand-copy">
-            <div class="eyebrow">Document workspace</div>
-            <div
-              class="doc-title editable"
-              contenteditable="true"
-              spellcheck="false"
-              data-placeholder="Untitled document"
-            >
+        <div class="brand-area">
+          <div class="docs-mark" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="title-stack">
+            <div class="workspace-label" contenteditable="true" spellcheck="false">
+              DOCUMENT WORKSPACE
+            </div>
+            <div class="doc-title" contenteditable="true" spellcheck="false">
               Atlas editorial draft
             </div>
           </div>
         </div>
-        <div class="topbar-actions">
-          <button class="icon-btn" type="button" aria-label="Version history">в—Њ</button>
-          <button class="icon-btn" type="button" aria-label="Comments">вњ¦</button>
-          <button class="icon-btn" type="button" aria-label="Video call">в–Ј</button>
-          <button class="share-btn" type="button">
-            <span>Share</span><span class="share-note">Link</span>
+
+        <div class="topbar-right">
+          <button class="circle-action" type="button" aria-label="History">в—ґ</button>
+          <button class="circle-action" type="button" aria-label="Comments">в–¤</button>
+          <button class="circle-action" type="button" aria-label="Video call">в—«</button>
+          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
+            B
           </button>
-          <div class="presence"><span class="presence-dot"></span><span>Live draft</span></div>
+          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
+            B
+          </button>
+          <button class="small-pill" type="button" contenteditable="true" spellcheck="false">
+            B
+          </button>
+          <button class="share-btn" type="button">
+            <span>Share</span>
+            <span class="share-divider"></span>
+            <span class="share-link">Link</span>
+          </button>
+          <div class="live-chip">
+            <span class="live-dot"></span>
+            <span>Live draft</span>
+          </div>
         </div>
       </header>
 
-      <nav class="menu-row" aria-label="Editor menu">
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">File</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Edit</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">View</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Insert</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Format</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Tools</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Extensions</span>
-        <span class="menu-item editable" contenteditable="true" spellcheck="false">Help</span>
+      <nav class="menubar" aria-label="Menu">
+        <span contenteditable="true" spellcheck="false">File</span>
+        <span contenteditable="true" spellcheck="false">Edit</span>
+        <span contenteditable="true" spellcheck="false">View</span>
+        <span contenteditable="true" spellcheck="false">Insert</span>
+        <span contenteditable="true" spellcheck="false">Format</span>
+        <span contenteditable="true" spellcheck="false">Tools</span>
+        <span contenteditable="true" spellcheck="false">Extensions</span>
+        <span contenteditable="true" spellcheck="false">Help</span>
       </nav>
 
       <section class="toolbar" aria-label="Formatting toolbar">
-        <div class="toolbar-group">
-          <button class="tool-btn" type="button">вЊ•</button>
-          <button class="tool-btn" type="button">в†¶</button>
-          <button class="tool-btn" type="button">в†·</button>
-          <button class="tool-btn" type="button">вЋ™</button>
-          <button class="tool-btn" type="button">вњЋ</button>
+        <div class="tool-group left">
+          <button class="icon-btn" type="button" aria-label="Search">вЊ•</button>
+          <button class="icon-btn" type="button" aria-label="Undo">в†¶</button>
+          <button class="icon-btn" type="button" aria-label="Redo">в†·</button>
+          <button class="icon-btn" type="button" aria-label="Print">вЋ™</button>
+          <button class="icon-btn" type="button" aria-label="Paint format">вљ‡</button>
         </div>
-        <div class="toolbar-group">
-          <button class="tool-chip editable" contenteditable="true" spellcheck="false" data-placeholder="100%">
+
+        <div class="tool-group">
+          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
             100%
           </button>
-          <button class="tool-chip editable" contenteditable="true" spellcheck="false" data-placeholder="Title">
+          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
             Title
           </button>
-          <button class="tool-chip editable" contenteditable="true" spellcheck="false" data-placeholder="Manrope">
+          <button class="field-chip" type="button" contenteditable="true" spellcheck="false">
             Manrope
           </button>
         </div>
-        <div class="toolbar-group">
-          <button class="tool-btn" type="button">в€’</button>
-          <button
-            class="tool-chip size-chip editable"
-            contenteditable="true"
-            spellcheck="false"
-            data-placeholder="26"
-          >
+
+        <div class="tool-group">
+          <button class="icon-btn" type="button" aria-label="Decrease size">в€’</button>
+          <button class="field-chip size" type="button" contenteditable="true" spellcheck="false">
             26
           </button>
-          <button class="tool-btn" type="button">+</button>
+          <button class="icon-btn" type="button" aria-label="Increase size">+</button>
         </div>
-        <div class="toolbar-group">
-          <button class="tool-btn active" type="button">B</button>
-          <button class="tool-btn" type="button"><em>I</em></button>
-          <button class="tool-btn" type="button"><u>U</u></button>
-          <button class="tool-btn" type="button">A</button>
-          <button class="tool-btn" type="button">в–†</button>
+
+        <div class="tool-group">
+          <button class="toggle-btn active" type="button">B</button>
+          <button class="toggle-btn" type="button"><em>I</em></button>
+          <button class="toggle-btn" type="button"><u>U</u></button>
+          <button class="toggle-btn" type="button">A</button>
+          <button class="toggle-btn" type="button">в—ђ</button>
         </div>
-        <div class="toolbar-group spacer">
-          <button class="tool-btn" type="button">в†—</button>
-          <button class="tool-btn" type="button">в—«</button>
-          <button class="tool-btn" type="button">в–¤</button>
-          <button class="tool-btn" type="button">в°</button>
-          <button class="tool-btn" type="button">в‰Ў</button>
-          <button class="tool-btn" type="button">Г—</button>
+
+        <div class="tool-group spacer">
+          <button class="icon-btn" type="button" aria-label="Link">в›“</button>
+          <button class="icon-btn" type="button" aria-label="Comment">вњЋ</button>
+          <button class="icon-btn" type="button" aria-label="Image">в–Ј</button>
+          <button class="icon-btn" type="button" aria-label="Align">в°</button>
+          <button class="icon-btn" type="button" aria-label="Spacing">в†•</button>
+          <button class="icon-btn" type="button" aria-label="Clear formatting">Г—</button>
         </div>
-        <div class="toolbar-group mode-group"><button class="mode-btn" type="button">Editing</button></div>
+
+        <button class="mode-btn" type="button">Editing</button>
       </section>
 
       <section class="workspace">
         <aside class="sidebar">
-          <div class="sidebar-header">
-            <button class="ghost-back" type="button">в†ђ</button>
+          <button class="back-btn" type="button" aria-label="Back">в†ђ</button>
+
+          <div class="sidebar-head">
             <div class="sidebar-title">Document tabs</div>
-            <button class="ghost-plus" type="button">+</button>
+            <button class="add-btn" type="button" aria-label="Add tab">+</button>
           </div>
 
-          <div class="tab-stack">
-            <button class="tab-pill active" type="button">
-              <span class="tab-icon"></span>
-              <span class="editable" contenteditable="true" spellcheck="false" data-placeholder="Tab 1">Tab 1</span>
-              <span class="tab-kebab">в‹®</span>
-            </button>
-            <div class="outline">
-              <div
-                class="outline-item active editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Atlas editorial draft"
-              >
-                Atlas editorial draft
-              </div>
-              <div
-                class="outline-item editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="What this page is for"
-              >
-                What this page is for
-              </div>
-              <div
-                class="outline-item editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Navigation logic"
-              >
-                Navigation logic
-              </div>
-              <div
-                class="outline-item editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Future ChatGPT area"
-              >
-                Future ChatGPT area
-              </div>
-              <div
-                class="outline-item editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Sharing and publishing"
-              >
-                Sharing and publishing
-              </div>
-            </div>
-          </div>
+          <button class="tab-pill active" type="button">
+            <span class="tab-icon"></span>
+            <span contenteditable="true" spellcheck="false">Tab 1</span>
+            <span class="tab-menu">в‹®</span>
+          </button>
 
-          <div class="sidebar-footer">
-            <span class="hint-label">Structure</span>
-            <p class="hint-copy">Headings you add here will appear in the page outline later.</p>
-          </div>
+          <div class="outline-hint">Headings you add to the document will appear here.</div>
         </aside>
 
         <section class="canvas">
@@ -177,160 +141,14 @@
             <span></span><span></span><span></span><span></span><span></span><span></span>
           </div>
 
-          <article class="document">
-            <div class="document-meta">
-              <div class="meta-row">
-                <span class="meta-label">Images</span>
-                <span
-                  class="meta-chip editable"
-                  contenteditable="true"
-                  spellcheck="false"
-                  data-placeholder="hero shot placeholder"
-                >
-                  hero shot placeholder
-                </span>
-              </div>
-              <div class="meta-row">
-                <span class="meta-label">Meta Description</span>
-                <span
-                  class="meta-copy editable"
-                  contenteditable="true"
-                  spellcheck="false"
-                  data-placeholder="Write a short summary..."
-                >
-                  A document-first workspace built for writing, editing, and sharing a live draft
-                  with a clean editor surface.
-                </span>
-              </div>
+          <article class="page">
+            <div class="assistant-dot" aria-hidden="true"></div>
+            <div class="assistant-chip-row">
+              <button class="assistant-chip" type="button">Templates</button>
+              <button class="assistant-chip" type="button">Meeting notes</button>
+              <button class="assistant-chip" type="button">Email draft</button>
+              <button class="assistant-chip" type="button">More</button>
             </div>
-
-            <h1
-              class="headline editable"
-              contenteditable="true"
-              spellcheck="false"
-              data-placeholder="Write like a document."
-            >
-              Write like a document. Ship like a product.
-            </h1>
-
-            <p
-              class="lede editable"
-              contenteditable="true"
-              spellcheck="false"
-              data-placeholder="Add a short intro..."
-            >
-              This first version is visual only: the layout, hierarchy, and typography are already
-              shaped like a working editor, so the next step can focus on real text tools,
-              collaboration, and AI content later.
-            </p>
-
-            <div class="choice-row" aria-label="Quick actions">
-              <button class="choice-chip" type="button">Templates</button>
-              <button class="choice-chip" type="button">Meeting notes</button>
-              <button class="choice-chip" type="button">Email draft</button>
-              <button class="choice-chip" type="button">More</button>
-            </div>
-
-            <section class="section-block">
-              <h2
-                class="section-title editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="What this page is for"
-              >
-                What this page is for
-              </h2>
-              <p
-                class="body-copy editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Explain the section..."
-              >
-                The layout is built to feel calm and familiar: a top command area, a left
-                navigation column, and a centered paper surface with a large editable title.
-                That gives room for future controls without making the first release look busy.
-              </p>
-            </section>
-
-            <section class="section-block split">
-              <div>
-                <h2
-                  class="section-title editable"
-                  contenteditable="true"
-                  spellcheck="false"
-                  data-placeholder="Navigation model"
-                >
-                  Navigation model
-                </h2>
-                <p
-                  class="body-copy editable"
-                  contenteditable="true"
-                  spellcheck="false"
-                  data-placeholder="Explain navigation..."
-                >
-                  File, Edit, View, Insert, and the rest are now editable labels, so the interface
-                  can be renamed to fit your product instead of staying tied to the Google Docs
-                  vocabulary.
-                </p>
-              </div>
-              <div class="signal-card">
-                <span class="signal-label">Focus state</span>
-                <div class="signal-value">Document first</div>
-                <div class="signal-subcopy">
-                  Clear hierarchy, minimal chrome, and editable text nodes everywhere that matter.
-                </div>
-              </div>
-            </section>
-
-            <section class="section-block">
-              <h2
-                class="section-title editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Future ChatGPT area"
-              >
-                Future ChatGPT area
-              </h2>
-              <p
-                class="body-copy editable"
-                contenteditable="true"
-                spellcheck="false"
-                data-placeholder="Describe the assistant space..."
-              >
-                This block is reserved for the later assistant flow: prompts, replies, document
-                generation, and inline rewrites. For now it only anchors the page visually so we
-                can align the next iteration with the same structure.
-              </p>
-            </section>
-
-            <section class="section-block final-block">
-              <span class="final-kicker">Publishing</span>
-              <div class="final-grid">
-                <div>
-                  <h2
-                    class="section-title editable"
-                    contenteditable="true"
-                    spellcheck="false"
-                    data-placeholder="Shareable link"
-                  >
-                    Shareable link
-                  </h2>
-                  <p
-                    class="body-copy editable"
-                    contenteditable="true"
-                    spellcheck="false"
-                    data-placeholder="Add sharing notes..."
-                  >
-                    The Share button is styled as a link-sharing action now, so we can attach real
-                    publishing logic later without changing the look of the top bar.
-                  </p>
-                </div>
-                <div class="share-preview">
-                  <div class="share-preview-row"><span class="mini-dot"></span><span class="mini-dot"></span><span class="mini-dot"></span></div>
-                  <div class="share-preview-link">atlas-doc-studio.vercel.app</div>
-                </div>
-              </div>
-            </section>
           </article>
 
           <div class="ruler ruler-bottom" aria-hidden="true">
